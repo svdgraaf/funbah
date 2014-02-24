@@ -1,18 +1,66 @@
-<html>
-    <head>
-        <title>Funbah</title>
-        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    </head>
-    <body>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <img src="" id="targetImage" class="thumbnail" />
-                </div>
-            </div>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Funbah</title>
+
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        .button {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            display: inline-block;
+            border-radius: 5px;
+            margin: 10px;
+        }
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Funbah</a>
         </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div style="text-align: center;margin-top: 60px">
+        <div>
+            <a href="#" onclick="loadImage();return false;" class="fa-thumbs-o-down button"></a>
+            <a href="#" onclick="loadImage();return false;" class="fa-exclamation button">WUT?!</a>
+            <a href="" onclick="loadImage();return false;" class="fa-thumbs-o-up button"></a>
+        </div>
+        <img src="" id="targetImage" class="img-rounded img-thumbnail" />
+        <br />
+        <a href="#" onclick="loadImage();return false;" class="fa-refresh button"></a>
+      </div>
         <script>
             function getRandomInt (min, max) {
                 return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -35,5 +83,6 @@
             loadImage();
 
         </script>
-    </body>
+    </div><!-- /.container -->
+  </body>
 </html>
