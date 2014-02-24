@@ -46,6 +46,11 @@
           </button>
           <a class="navbar-brand" href="#">Funbah</a>
         </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Random Funda foto's</a></li>
+          </ul>
+        </div>
       </div>
     </div>
 
@@ -58,8 +63,11 @@
             <a href="" onclick="loadImage();return false;" class="fa-thumbs-o-up button"></a>
         </div>
         <img src="" id="targetImage" class="img-rounded img-thumbnail" />
-        <br />
-        <a href="#" onclick="loadImage();return false;" class="fa-refresh button"></a>
+        <p>
+            Alle foto's &copy; <a href="http://funda.nl/">Funda.nl</a>
+            <br />
+            <a href="#" onclick="loadImage();return false;" class="fa-refresh button"></a>
+        </p>
       </div>
         <script>
             function getRandomInt (min, max) {
