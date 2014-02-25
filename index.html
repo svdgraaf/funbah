@@ -19,6 +19,29 @@
       <script src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js'></script>
     <![endif]-->
 
+
+<script type='text/javascript'>
+// <![CDATA[
+      var googletag = googletag || {};
+      googletag.cmd = googletag.cmd || [];
+      (function() {
+      var gads = document.createElement('script');
+      gads.async = true;
+      gads.type = 'text/javascript';
+      var useSSL = 'https:' == document.location.protocol;
+      gads.src = (useSSL ? 'https:' : 'http:') +
+      '//www.googletagservices.com/tag/js/gpt.js';
+      var node = document.getElementsByTagName('script')[0];
+      node.parentNode.insertBefore(gads, node);
+      })();
+      googletag.cmd.push(function() {
+      googletag.defineSlot('/10580130/leaderboard', [[320, 50], [728, 90]], 'div-gpt-ad-1393334674705-0').addService(googletag.pubads());
+      googletag.pubads().enableSingleRequest();
+      googletag.enableServices();
+      });
+
+// ]]>
+</script>
   </head>
   <body>
 
@@ -64,10 +87,14 @@
         </p>
         <script async='async' src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
         <ins class='adsbygoogle' data-ad-format='auto' style='display:block' data-ad-client='ca-pub-9954481467901275' data-ad-slot='5863838194'></ins>
-        <script>
-          (adsbygoogle = window.adsbygoogle || []).push({});
+        <div id='div-gpt-ad-1393334674705-0'>
+<script type='text/javascript'>
+// <![CDATA[
+            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1393334674705-0'); });
 
-        </script>
+// ]]>
+</script>
+        </div>
         <div class='fb-comments' data-numposts='50' data-colorscheme='light' data-href='http://funbah.nl/'></div>
 <script type='text/javascript'>
 // <![CDATA[
@@ -108,6 +135,7 @@
                 $('#targetImage').attr("src", src);
                 try {
                   ga('send', 'pageview');
+                  googletag.pubads().refresh();
                 } catch(err) {}
             });
 
