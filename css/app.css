@@ -35,7 +35,19 @@ a:hover {
     margin-top: 70px; }
 
   .fb-like {
-    margin-right: 10px; } }
+    margin-right: 10px; }
+
+  .ad-small {
+    display: block; }
+
+  .ad-large {
+    display: none; } }
+@media (min-width: 751px) {
+  .ad-small {
+    display: none; }
+
+  .ad-large {
+    display: block; } }
 .image {
   background-image: url(../images/loading.gif);
   min-width: 200px;
