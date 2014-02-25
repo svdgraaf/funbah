@@ -76,7 +76,6 @@
             }
 
             $('#targetImage').error(function(){
-                console.log('error?');
                 $('#targetImage').attr('src', './images/loading.gif');
                 window.location.hash = '';
                 reloader = setTimeout(function(){loadImage()}, 500);
