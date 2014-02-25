@@ -44,7 +44,7 @@
         googletag.pubads().enableSingleRequest();
         googletag.enableServices();
       });
-
+      setTimeout(function(){googletag.pubads().refresh()}, 30000);
 
 // ]]>
 </script>
@@ -159,7 +159,6 @@
                 $('#targetImage').attr("src", src);
                 try {
                   ga('send', 'pageview');
-                  googletag.pubads().refresh();
                 } catch(err) {}
             });
 
