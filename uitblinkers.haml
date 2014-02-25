@@ -80,6 +80,7 @@
         :javascript
           $( document ).ready(function() {
             $.getJSON("/data.json", function( data ) {
+              console.log(data);
               $.each( data.bad, function( key, val ) {
                 hash = val[0]
                 title = val[1]
