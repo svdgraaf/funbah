@@ -79,8 +79,9 @@
         .image
           %img#targetImage.img-thumbnail{'src':'./images/loading.gif'}
         %p
-            Alle foto's zijn eigendom van en &copy; 
-            %a{'href':'http://funda.nl/'} Funda.nl
+            Alle foto's zijn eigendom en &copy; 
+            %a{'href':'http://funda.nl/'} Funda.nl.
+            Maak gebruik van hun diensten, ze zijn awesome.
 
         #div-gpt-ad-1393334674705-0.ad-large
           :javascript
@@ -124,7 +125,7 @@
                 $('#shareButton').data('href', document.location.href)
                 
                 hash = window.location.hash.substring(1, window.location.hash.length);
-                src = "http://cloud.funda.nl/valentina_media/" + hash + "_grotere.jpg";
+                src = "http://cloud.funda.nl/valentina_media/" + hash + "_groot.jpg";
 
                 $('#targetImage').attr("src", src);
                 try {
