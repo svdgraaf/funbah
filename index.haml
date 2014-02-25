@@ -69,6 +69,13 @@
 
     .container.body
       %div{'style':'text-align: center;'}
+        #div-gpt-ad-1393334674705-0.ad-large
+          :javascript
+            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1393334674705-0'); });
+        #div-gpt-ad-1393334674705-1.ad-small
+          :javascript
+            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1393334674705-1'); });
+
         %div.toolbar
           .buttons-holder
             %a.button.fa.fa-thumbs-o-up{'href':'#', 'onclick':'loadImage();ga("send", "event", "like", window.location.hash);return false'}
@@ -82,14 +89,6 @@
             Alle foto's zijn eigendom en &copy; 
             %a{'href':'http://funda.nl/'} Funda.nl.
             Maak gebruik van hun diensten, ze zijn awesome.
-
-        #div-gpt-ad-1393334674705-0.ad-large
-          :javascript
-            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1393334674705-0'); });
-        #div-gpt-ad-1393334674705-1.ad-small
-          :javascript
-            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1393334674705-1'); });
-
 
         .fb-comments{'data-href':'http://www.huizengluren.nl/','data-numposts':'50','data-colorscheme':'light'}
         :javascript
