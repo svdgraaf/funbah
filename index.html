@@ -68,11 +68,17 @@
                 return Math.floor(Math.random() * (max - min + 1)) + min;
             }
 
-            function loadImage() {
-                src = "http://cloud.funda.nl/valentina_media/0" + getRandomInt(10,42) + '/' + getRandomInt(100,500) + '/' + getRandomInt(100,800) + "_grotere.jpg";
-                $('#targetImage').error(function(){
-                    loadImage();
-                });
+            function loadImage(hash) {
+                if (hash) {
+                  hash = hash.substring(1, hash.length);
+                } else {
+                  hash = "0" + getRandomInt(10,42) + '/' + getRandomInt(100,500) + '/' + getRandomInt(100,800);
+                }
+
+                window.location.hash = hash
+
+                src = "http://cloud.funda.nl/valentina_media/" + hash + "_grotere.jpg";
+
 
                 $('#targetImage').attr("src", src);
                 try {
@@ -84,7 +90,7 @@
                 loadImage();
             });
 
-            loadImage();
+            loadImage(window.location.hash)
 
 // ]]>
 </script>
