@@ -47,9 +47,9 @@
       <div style='text-align: center;'>
         <div class='toolbar'>
           <div class='buttons-holder'>
-            <a class='button fa fa-thumbs-o-up' href='#' onclick='loadImage();ga("_trackEvent", "like", window.location.hash);return false'></a>
-            <a class='button fa fa-refresh fa-2' href='#' onclick='loadImage();ga("_trackEvent", "refresh");return false'></a>
-            <a class='button fa fa-thumbs-o-down' href='#' onclick='loadImage();ga("_trackEvent", "dislike", window.location.hash);return false'></a>
+            <a class='button fa fa-thumbs-o-up' href='#' onclick='loadImage();ga("send", "event", "like", window.location.hash);return false'></a>
+            <a class='button fa fa-refresh fa-2' href='#' onclick='loadImage();ga("send", "event", "refresh");return false'></a>
+            <a class='button fa fa-thumbs-o-down' href='#' onclick='loadImage();ga("send", "event", "dislike", window.location.hash);return false'></a>
           </div>
           <div id='shareButton' class='fb-share-button' data-type='box_count' data-href='http://www.funbah.nl/'></div>
         </div>

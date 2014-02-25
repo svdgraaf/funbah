@@ -37,9 +37,9 @@
       %div{'style':'text-align: center;'}
         %div.toolbar
           .buttons-holder
-            %a.button.fa.fa-thumbs-o-up{'href':'#', 'onclick':'loadImage();ga("_trackEvent", "like", window.location.hash);return false'}
-            %a.button.fa.fa-refresh.fa-2{'href':'#', 'onclick':'loadImage();ga("_trackEvent", "refresh");return false'}
-            %a.button.fa.fa-thumbs-o-down{'href':'#', 'onclick':'loadImage();ga("_trackEvent", "dislike", window.location.hash);return false'}
+            %a.button.fa.fa-thumbs-o-up{'href':'#', 'onclick':'loadImage();ga("send", "event", "like", window.location.hash);return false'}
+            %a.button.fa.fa-refresh.fa-2{'href':'#', 'onclick':'loadImage();ga("send", "event", "refresh");return false'}
+            %a.button.fa.fa-thumbs-o-down{'href':'#', 'onclick':'loadImage();ga("send", "event", "dislike", window.location.hash);return false'}
           #shareButton.fb-share-button{'data-href':'http://www.funbah.nl/','data-type':'box_count'}
 
         .image
