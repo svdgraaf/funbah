@@ -106,16 +106,14 @@
 // <![CDATA[
           $( document ).ready(function() {
             $.getJSON("data.json", function( data ) {
-              console.log('foobar', data);
               $.each( data.bad, function( key, val ) {
-                hash = key
-                title = val
+                hash = val[0]
+                title = val[1]
                 img = $('<img>').attr('src','http://cloud.funda.nl/valentina_media/' + hash + '_klein.jpg').addClass('img-thumbnail');
                 link = $('<a>').attr('href','/#' + hash).attr('title',title).append(img)
                 $('#bad-images').append(link);
               });
             });
-            console.log('ready');
           });
 // ]]>
 </script>
