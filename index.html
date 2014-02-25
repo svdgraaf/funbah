@@ -10,16 +10,14 @@
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
     <script src='https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'></script>
     <link href='https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet' />
+    <link href='css/app.css' rel='stylesheet' />
 
     <!--[if lt IE 9]>
       <script src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js'></script>
       <script src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js'></script>
     <![endif]-->
 
-    <style>
-        <div class='button'>{            width: 50px;            height: 50px;            border: 1px solid black;            display: inline-block;            border-radius: 5px;            margin: 10px;        }</div>
 
-    </style>
   </head>
   <body>
 
@@ -49,10 +47,9 @@
     <div class='container'>
       <div style='text-align: center;margin-top: 60px'>
         <div>
-          <a class='button fa-refresh' style='margin-right: 50px' href='#' onclick='loadImage();return false'></a>
-          <a class='button fa-thumbs-o-down' href='#' onclick='loadImage();return false'></a>
-          <a class='button fa-exclamation' href='#' onclick='loadImage();return false'></a>
-          <a class='button fa-thumbs-o-up' href='#' onclick='loadImage();return false'></a>
+          <a class='button fa fa-thumbs-o-up' href='#' onclick='loadImage();return false'></a>
+          <a class='button fa fa-refresh fa-2' href='#' onclick='loadImage();return false'></a>
+          <a class='button fa fa-thumbs-o-down' href='#' onclick='loadImage();return false'></a>
         </div>
         <img id='targetImage' class='img-thumbnail' src='' />
         <p>

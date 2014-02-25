@@ -1,0 +1,13 @@
+a.button {
+  display: inline-block;
+  border-radius: 5px;
+  margin: 10px;
+  font-size: 2em;
+  min-width: 50px;
+  min-height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: #222222;
+  border-color: #080808; }
+a:hover {
+  text-decoration: none; }
