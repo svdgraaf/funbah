@@ -41,7 +41,8 @@ a:hover {
     display: block;
     position: fixed;
     bottom: 0;
-    left: 0; }
+    left: 0;
+    z-index: 100000; }
 
   .ad-large {
     display: none; } }
@@ -50,10 +51,8 @@ a:hover {
     display: none; }
 
   .ad-large {
-    display: block; } }
-.ad-small, .ad-large {
-  margin-bottom: 10px; }
-
+    display: block;
+    margin-bottom: 10px; } }
 .image {
   background-image: url(../images/loading.gif);
   min-width: 200px;
