@@ -48,6 +48,9 @@ a:hover {
 
   .ad-large {
     display: block; } }
+.ad-small, .ad-large {
+  margin-bottom: 10px; }
+
 .image {
   background-image: url(../images/loading.gif);
   min-width: 200px;
