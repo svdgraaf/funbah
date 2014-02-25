@@ -18,8 +18,7 @@ a:hover {
   text-decoration: none; }
 
 .toolbar {
-  margin-bottom: 20px;
-  margin-top: 80px; }
+  margin-bottom: 20px; }
   .toolbar .buttons-holder {
     display: inline-block; }
 
@@ -59,3 +58,6 @@ a:hover {
   min-height: 200px;
   background-position: center center;
   background-repeat: no-repeat; }
+
+.body {
+  margin-top: 80px; }

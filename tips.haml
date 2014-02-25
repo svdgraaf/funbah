@@ -4,8 +4,8 @@
     %meta{'charset':'utf-8'}
     %meta{'http-equiv':'X-UA-Compatible','content':'IE=edge'}
     %meta{'name':'viewport','content':'width=device-width, initial-scale=1'}
-    %meta{'description': "Random Funda.nl foto's, bekijk de mooiste of lelijkste huizen"}
-    %title HuizenGluren.nl Bèta
+    %meta{'description': "Huizengluren | Huis fotograferen tips"}
+    %title HuizenGluren.nl Tips
 
     %link{'href':'https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css','rel':'stylesheet'}
     %script{'src':'https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'}
@@ -56,88 +56,55 @@
           %a.navbar-brand{'href':'/'} HuizenGluren.nl
         .collapse.navbar-collapse
           %ul.nav.navbar-nav
-            %li.active
-              %a{'href':''}
-                Random Funda foto's
             %li
+              %a{'href':'/'}
+                Random Funda foto's
+                
+            %li.active
               %a{'href':'/tips.html'}
                 Tips
 
-
     .container.body
-      %div{'style':'text-align: center;'}
-        %div.toolbar
-          .buttons-holder
-            %a.button.fa.fa-thumbs-o-up{'href':'#', 'onclick':'loadImage();ga("send", "event", "like", window.location.hash);return false'}
-            %a.button.fa.fa-refresh.fa-2{'href':'#', 'onclick':'loadImage();ga("send", "event", "refresh");return false'}
-            %a.button.fa.fa-thumbs-o-down{'href':'#', 'onclick':'loadImage();ga("send", "event", "dislike", window.location.hash);return false'}
-          #shareButton.fb-share-button{'data-href':'http://www.huizengluren.nl/','data-type':'box_count'}
-
-        .image
-          %img#targetImage.img-thumbnail{'src':'./images/loading.gif'}
-        %p
-            Alle foto's &copy; 
-            %a{'href':'http://funda.nl/'} Funda.nl
-
-        #div-gpt-ad-1393334674705-0.ad-large
-          :javascript
-            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1393334674705-0'); });
-        #div-gpt-ad-1393334674705-1.ad-small
-          :javascript
-            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1393334674705-1'); });
-
-
-        .fb-comments{'data-href':'http://huizengluren.nl/','data-numposts':'50','data-colorscheme':'light'}
+      #div-gpt-ad-1393334674705-0.ad-large
         :javascript
-            function getRandomInt (min, max) {
-                return Math.floor(Math.random() * (max - min + 1)) + min;
-            }
-            var current_hash = '';
-            var reloader;
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1393334674705-0'); });
+      #div-gpt-ad-1393334674705-1.ad-small
+        :javascript
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1393334674705-1'); });
 
-            function loadImage(hash) {
-                if(reloader){
-                  window.clearInterval(reloader);
-                }
-                if (hash) {
-                  hash = hash.substring(1, hash.length);
-                } else {
-                  hash = "0" + getRandomInt(10,42) + '/' + getRandomInt(100,800) + '/' + getRandomInt(100,800);
-                }
+      %div
+        %h1 Tips voor het maken van woningfoto's
+        %p Je huis klaar maken voor het maken van foto's, is eigenlijk ook het voorbereiden op bezichtigingen. Het is dé kans om grondig op te ruimen en schoon te maken (ook al heb je daar wellicht geen zin in). Als je het deze keer echter goed opruimt, hoef je het daarna voor bezichtingen minder goed te doen.
 
-                window.location.hash = hash
-            }
+        %h2 Het gaat om de details
+        %p Dus hop, aan de slag. Een schoon en opgeruimd huis zorgt automatisch voor betere foto's. Het huis mag er best gezellig uitzien op de foto's, maar zorg er niet voor dat het een rommeltje is. We adviseren echter om alle foto's die her en daar staan weg te halen, die hoeven niet nog jarenlang op funda.nl te staan, toch?
 
-            $('#targetImage').error(function(){
-                $('#targetImage').attr('src', './images/loading.gif');
-                window.location.hash = '';
-                reloader = setTimeout(function(){loadImage()}, 500);
-            });
+        %p Als je je onderstaande lijst houdt met tips houdt, kom je al een heel eind!
+        %ul
+          %li Zorg dat het huis schoon en aan kant is
+          %li Maak alle ruimtes, met name de keuken, badkamer en toilet goed schoon (niemand heeft behoefte aan remsporen op de foto)
+          %li Zorg ervoor dat ook de ramen schoon zijn (die zon buiten willen we zien!)
+          %li Maak alle bedden op (ja, netjes, strijken mag)
+          %li Ruim grondig op zodat uw huis er "strak" uit ziet
 
-            $(window).on('hashchange',function(){ 
-              if(window.location.hash == '') {
-                return;
-              }
-                $('#shareButton').data('href', document.location.href)
-                
-                hash = window.location.hash.substring(1, window.location.hash.length);
-                src = "http://cloud.funda.nl/valentina_media/" + hash + "_grotere.jpg";
+          %li Kijk kritisch rond en ruim kleine spulletjes op (die potjes van tante Annie zijn écht niet mooi)
+          %li Zet erg persoonlijke items zoals bijvoorbeeld kinderfoto's uit het zicht
+          %li Ruim wasgoed en kledingstukken op (en stop ze gelijk in de wasmachine/kast)
+          %li Zorg voor licht en sfeer in jouw woning (maak 's avonds geen foto's, maar overdag)
 
-                $('#targetImage').attr("src", src);
-                try {
-                  ga('send', 'pageview');
-                  googletag.pubads().refresh();
-                } catch(err) {}
-            });
+          %li Maak de woning zo licht mogelijk: doe gordijnen en rolluiken open (en de ramen lappen!)
+          %li Zet tussendeuren open voor nog meer lichtinval (ook als je ze niet ziet, kan het toch licht doorgeven)
+          %li Hebt u een tuin? Zet dan ook de deur naar de tuin open.
+          %li Zet verse bloemen neer en zorg dat uw planten er fris uit zien. (Plastic bloemen tellen niet)
 
-            if(window.location.hash == '') {
-              loadImage();
-            } else {
-              // force update of hash
-              hash = window.location.hash;
-              window.location.hash = '';
-              window.location.hash = hash;
-            }
+        %h2 Andere aandachtspunten bij het fotograferen van uw woning
+        %p Heb je veel meubels in je kamer staan, dan kan het huis rommelig overkomen. Hetzelfde geldt voor spullen van je hobby's (die treintjes op zolder?). Je zou tijdelijk wat opslagruimte kunnen huren. Of je zou uiteindelijk toch 1 van die 3 banken weg kunnen doen. Scheelt je ook weer sjouwen bij het verhuizen! :)
+
+        %p Niet iedereen houd van huisdieren (hoe lief Keessie ook kijkt). Heb je een huisdier, zorg er dan voor dat ze, en alle hulpmiddelen (kattenbakken, hondenmanden, etc), niet op de foto staan.
+
+        %p Heb je veel betere tips? Laat het ons weten!
+        .fb-comments{'data-href':'http://huizengluren.nl/tips/','data-numposts':'50','data-colorscheme':'light'}
+
 
     %script
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
