@@ -9,6 +9,7 @@
     <link href='https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css' rel='stylesheet' />
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
     <script src='https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'></script>
+    <script src='./javascript/jquery.storageapi.min.js'></script>
     <link href='https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet' />
     <link href='css/app.css' rel='stylesheet' />
 
@@ -46,13 +47,15 @@
       <div style='text-align: center;'>
         <div class='toolbar'>
           <div class='buttons-holder'>
-            <a class='button fa fa-thumbs-o-up' href='#' onclick='loadImage();return false'></a>
-            <a class='button fa fa-refresh fa-2' href='#' onclick='loadImage();return false'></a>
-            <a class='button fa fa-thumbs-o-down' href='#' onclick='loadImage();return false'></a>
+            <a class='button fa fa-thumbs-o-up' href='#' onclick='loadImage();ga("_trackEvent", "like", window.location.hash);return false'></a>
+            <a class='button fa fa-refresh fa-2' href='#' onclick='loadImage();ga("_trackEvent", "refresh");return false'></a>
+            <a class='button fa fa-thumbs-o-down' href='#' onclick='loadImage();ga("_trackEvent", "dislike", window.location.hash);return false'></a>
           </div>
           <div id='shareButton' class='fb-share-button' data-type='box_count' data-href='http://www.funbah.nl/'></div>
         </div>
-        <img id='targetImage' class='img-thumbnail' src='' />
+        <div class='image'>
+          <img id='targetImage' class='img-thumbnail' src='./images/loading.gif' />
+        </div>
         <p>
             Alle foto's &copy;
             <a href='http://funda.nl/'>Funda.nl</a>
@@ -71,20 +74,27 @@
                 return Math.floor(Math.random() * (max - min + 1)) + min;
             }
             var current_hash = '';
+            var reloader;
 
             function loadImage(hash) {
+                if(reloader){
+                  window.clearInterval(reloader);
+                }
                 if (hash) {
                   hash = hash.substring(1, hash.length);
                 } else {
-                  hash = "0" + getRandomInt(10,42) + '/' + getRandomInt(100,500) + '/' + getRandomInt(100,800);
+                  hash = "0" + getRandomInt(10,42) + '/' + getRandomInt(100,800) + '/' + getRandomInt(100,800);
                 }
 
                 window.location.hash = hash
             }
 
-            //$('#targetImage').error(function(){
-            //    loadImage();
-            //});
+            $('#targetImage').error(function(){
+                console.log('error?');
+                $('#targetImage').attr('src', './images/loading.gif');
+                window.location.hash = '';
+                reloader = setTimeout(function(){loadImage()}, 500);
+            });
 
             $(window).on('hashchange',function(){
               if(window.location.hash == '') {
@@ -94,7 +104,6 @@
 
                 hash = window.location.hash.substring(1, window.location.hash.length);
                 src = "http://cloud.funda.nl/valentina_media/" + hash + "_grotere.jpg";
-
 
                 $('#targetImage').attr("src", src);
                 try {
