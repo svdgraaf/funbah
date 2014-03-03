@@ -104,7 +104,9 @@
         <div class='toolbar'>
           <div class='buttons-holder'>
             <a class='button fa fa-thumbs-o-up' href='#' onclick='loadImage();ga("send", "event", "like", window.location.hash);return false'></a>
+            <a class='button fa fa-backward fa-2' href='#' onclick='previous();ga("send", "event", "refresh");return false'></a>
             <a class='button fa fa-refresh fa-2' href='#' onclick='loadImage();ga("send", "event", "refresh");return false'></a>
+            <a class='button fa fa-forward fa-2' href='#' onclick='next();ga("send", "event", "refresh");return false'></a>
             <a class='button fa fa-thumbs-o-down' href='#' onclick='loadImage();ga("send", "event", "dislike", window.location.hash);return false'></a>
           </div>
           <div id='shareButton' class='fb-share-button' data-type='box_count' data-href='http://www.huizengluren.nl/'></div>
@@ -144,6 +146,24 @@
                 }
 
                 window.location.hash = hash
+            }
+
+            function next() {
+              hash = window.location.hash;
+              hash = hash.split('/')
+              last = hash[hash.length-1]
+              last = parseInt(last) + 1;
+              hash[hash.length-1] = last;
+              window.location.hash = hash.join('/')
+            }
+
+            function previous() {
+              hash = window.location.hash;
+              hash = hash.split('/')
+              last = hash[hash.length-1]
+              last = parseInt(last) - 1;
+              hash[hash.length-1] = last;
+              window.location.hash = hash.join('/')
             }
 
             $('#targetImage').error(function(){

@@ -30,13 +30,15 @@ a:hover {
   overflow: hidden; }
   .toolbar .buttons-holder {
     display: inline-block; }
-  .toolbar #shareButton {
-    display: inline !important;
-    width: auto !important; }
 
 @media (max-width: 750px) {
   a.button {
-    margin-right: 10px; }
+    margin-right: 10px;
+    min-width: 0;
+    width: 52px; }
+    a.button.fa-thumbs-o-down {
+      padding-right: 0;
+      margin-right: 0; }
 
   .toolbar {
     position: fixed;
@@ -45,6 +47,9 @@ a:hover {
     width: 100%;
     left: 0;
     margin-bottom: 0; }
+
+  #shareButton {
+    display: none !important; }
 
   .fb-like {
     margin-right: 10px; }
@@ -70,7 +75,11 @@ a:hover {
     margin-bottom: 10px; }
 
   .body {
-    margin-top: 80px; } }
+    margin-top: 80px; }
+
+  .toolbar #shareButton {
+    display: inline !important;
+    width: auto !important; } }
 .image {
   min-width: 200px;
   min-height: 200px;
