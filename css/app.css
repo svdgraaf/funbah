@@ -9,6 +9,7 @@ a.button {
   text-align: center;
   line-height: 60px;
   color: #222222;
+  background-color: white;
   border: 1px solid #898f9c; }
   a.button:hover {
     background-color: #222222;
@@ -17,21 +18,33 @@ a.button {
 a:hover {
   text-decoration: none; }
 
+.navbar {
+  height: 51px;
+  overflow: hidden; }
+
 .toolbar {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  background-color: white;
+  padding: 10px;
+  height: 80px;
+  overflow: hidden; }
   .toolbar .buttons-holder {
     display: inline-block; }
+  .toolbar #shareButton {
+    display: inline !important;
+    width: auto !important; }
 
 @media (max-width: 750px) {
   a.button {
     margin-right: 10px; }
 
-  #shareButton {
-    display: inline !important;
-    width: auto !important; }
-
   .toolbar {
-    margin-top: 70px; }
+    position: fixed;
+    bottom: 0;
+    z-index: 10000;
+    width: 100%;
+    left: 0;
+    margin-bottom: 0; }
 
   .fb-like {
     margin-right: 10px; }
@@ -39,28 +52,30 @@ a:hover {
   .ad-small {
     display: block;
     position: fixed;
-    bottom: 0;
+    bottom: 70px;
     left: 0;
     z-index: 100000; }
 
   .ad-large {
-    display: none; } }
+    display: none; }
+
+  .body {
+    margin-top: 60px; } }
 @media (min-width: 751px) {
   .ad-small {
     display: none; }
 
   .ad-large {
     display: block;
-    margin-bottom: 10px; } }
+    margin-bottom: 10px; }
+
+  .body {
+    margin-top: 80px; } }
 .image {
-  background-image: url(../images/loading.gif);
   min-width: 200px;
   min-height: 200px;
   background-position: center center;
   background-repeat: no-repeat; }
-
-.body {
-  margin-top: 80px; }
 
 #bad-images img {
   margin: 10px; }
