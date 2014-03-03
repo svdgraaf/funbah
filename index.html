@@ -122,8 +122,13 @@
         <div class='fb-comments' data-numposts='50' data-colorscheme='light' data-href='http://www.huizengluren.nl/'></div>
 <script type='text/javascript'>
 // <![CDATA[
-            function getRandomInt (min, max) {
-                return Math.floor(Math.random() * (max - min + 1)) + min;
+            function getRandomInt (min, max, length) {
+                data = Math.floor(Math.random() * (max - min + 1)) + min;
+                data = data + "";
+                while(data.length < length) {
+                  data = "0" + data
+                }
+                return data
             }
             var current_hash = '';
             var reloader;
@@ -135,7 +140,7 @@
                 if (hash) {
                   hash = hash.substring(1, hash.length);
                 } else {
-                  hash = "0" + getRandomInt(10,42) + '/' + getRandomInt(100,800) + '/' + getRandomInt(100,800);
+                  hash = getRandomInt(0,42, 3) + '/' + getRandomInt(0,800, 3) + '/' + getRandomInt(0,800, 3);
                 }
 
                 window.location.hash = hash
